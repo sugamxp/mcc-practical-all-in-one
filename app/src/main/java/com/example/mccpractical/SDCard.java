@@ -38,13 +38,11 @@ public class SDCard extends AppCompatActivity {
     write.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        String
-            message = e1.getText().toString();
+        String message = e1.getText().toString();
         try {
-          File f = new File("/sdcard/myfile.txt");
+          File f  = new File("/sdcard/myfile.txt");
           f.createNewFile();
-          FileOutputStream
-              fout = new FileOutputStream(f);
+          FileOutputStream fout = new FileOutputStream(f);
           fout.write(message.getBytes());
           fout.close();
           Toast.makeText(getBaseContext(), "Data Written in SDCARD",
@@ -60,15 +58,10 @@ public class SDCard extends AppCompatActivity {
         String message;
         String buf = "";
         try {
-          File f = new
-              File("/sdcard/myfile.txt");
-          FileInputStream fin
-              = new FileInputStream(f);
-          BufferedReader br =
-              new BufferedReader(new
-                  InputStreamReader(fin));
-          while ((message =
-              br.readLine()) != null) {
+          File f = new File("/sdcard/myfile.txt");
+          FileInputStream fin = new FileInputStream(f);
+          BufferedReader br = new BufferedReader(new InputStreamReader(fin));
+          while ((message = br.readLine()) != null) {
             buf += message;
           }
           e1.setText(buf);

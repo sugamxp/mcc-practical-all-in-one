@@ -30,7 +30,9 @@ public class NotificationActivity extends AppCompatActivity {
     setContentView(R.layout.activity_notification);
     btn_five_second = findViewById(R.id.btn_five_second);
     btn_cancel = findViewById(R.id.btn_cancel);
+
     createNotificationChannel();
+
     btn_five_second.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {

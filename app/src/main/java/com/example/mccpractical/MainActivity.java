@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
     });
   }
 
+
   private boolean checkPermission() {
     int result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
     int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_FINE_LOCATION);
     return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
-
   }
   private void requestPermission() {
     ActivityCompat.requestPermissions(this,
@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
           }
         }
         break;
-
     }
   }
 }
